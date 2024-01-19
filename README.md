@@ -4,10 +4,11 @@
 
 1. An offline token from [Red Hat Automation Hub](https://console.redhat.com/ansible/automation-hub/token) to pull the certified and validated collections (account required)
 2. An account to access the container image registry at registry.redhat.io
-3. A RHEL system with podman, git, and pip installed
+3. A RHEL 9 system with podman, git, and pip installed
 ```
 sudo dnf install -y podman python3-pip git
 ```
+There are currently issues installing the latest version of ansible-builder (3.0.0) from PyPI on RHEL 8 systems.
    
 ## Building the execution environment image
 
