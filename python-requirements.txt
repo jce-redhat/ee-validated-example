@@ -1,0 +1,5 @@
+# f5networks.f5_modules
+packaging
+# juniper.device
+#junos-eznc >= 2.6.0
+#jxmlease >= 1.0.1
