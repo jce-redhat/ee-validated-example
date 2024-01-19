@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-1. An offline token from [Red Hat Automation Hub](https://console.redhat.com/ansible/automation-hub) to pull the certified and validated collections (account required)
+1. An offline token from [Red Hat Automation Hub](https://console.redhat.com/ansible/automation-hub/token) to pull the certified and validated collections (account required)
 2. An account to access the container image registry at registry.redhat.io
 3. A RHEL system with podman, git, and pip installed
 ```
