@@ -3,7 +3,8 @@
 ## Prerequisites
 
 1. An offline token from [Red Hat Automation Hub](https://console.redhat.com/ansible/automation-hub) to pull the certified and validated collections (account required)
-2. A RHEL system with podman, git, and pip installed
+2. An account to access the container image registry at registry.redhat.io
+3. A RHEL system with podman, git, and pip installed
 ```
 sudo dnf install -y podman python3-pip git
 ```
@@ -24,7 +25,11 @@ cd ee-validated-example
 export ANSIBLE_GALAXY_SERVER_CERTIFIED_TOKEN=<your_token>
 export ANSIBLE_GALAXY_SERVER_VALIDATED_TOKEN=<your_token>
 ```
-4. Run the ansible-builder command, passing in builder arguments that match the environment variables set above
+4. Log in to the image registry
+```
+podman login registry.redhat.io
+```
+5. Run the ansible-builder command, passing in builder arguments that match the environment variables set above
 ```
 ansible-builder build \
     --build-arg ANSIBLE_GALAXY_SERVER_CERTIFIED_TOKEN \
@@ -33,7 +38,7 @@ ansible-builder build \
     -t localhost/ee-validated-example:1.0
 ```
 This will create an execution environment image called "localhost/ee-validated-example" with the tag set to "1.0".  An alternate version number can be used if desired.
-5. Tag the new execution environment image with the "latest" tag
+6. Tag the new execution environment image with the "latest" tag
 ```
 podman tag localhost/ee-validated-example:1.0 localhost/ee-validated-example:latest
 ```
