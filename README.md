@@ -39,6 +39,7 @@ ansible-builder build \
     -t localhost/ee-validated-example:1.0
 ```
 This will create an execution environment image called "localhost/ee-validated-example" with the tag set to "1.0".  An alternate version number can be used if desired.
+
 6. Tag the new execution environment image with the "latest" tag
 ```
 podman tag localhost/ee-validated-example:1.0 localhost/ee-validated-example:latest
