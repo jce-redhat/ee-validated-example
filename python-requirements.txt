@@ -1,11 +1,17 @@
+# cisco.iosxr
+ncclient
+
 # f5networks.f5_modules
 packaging
+
 # infoblox.nios_modules
 infoblox-client
+
 # junipernetworks.junos
 junos-eznc
 jxmlease
 ncclient
 xmltodict
+
 # vmware.vmware_rest
 aiohttp
