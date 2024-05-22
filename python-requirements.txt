@@ -1,5 +1,11 @@
 # f5networks.f5_modules
 packaging
-# juniper.device
-#junos-eznc >= 2.6.0
-#jxmlease >= 1.0.1
+# infoblox.nios_modules
+infoblox-client
+# junipernetworks.junos
+junos-eznc
+jxmlease
+ncclient
+xmltodict
+# vmware.vmware_rest
+aiohttp
