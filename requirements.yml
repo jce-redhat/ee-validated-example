@@ -20,6 +20,7 @@ collections:
   - name: junipernetworks.junos
   - name: redhat.rhel_system_roles
   - name: servicenow.itsm
+  - name: splunk.es
   - name: vmware.vmware_rest
 
   # Automation Hub validated collections
