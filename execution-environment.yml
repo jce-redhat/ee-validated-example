@@ -1,6 +1,12 @@
 # https://ansible-builder.readthedocs.io/
 ---
 version: 3
+
+build_arg_defaults:
+  # add '--force-with-deps' if building from an EE that already contains
+  # collections, such as ee-supported-rhel[89]
+  ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '-vvv'
+
 images:
   base_image:
     name: registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel8:latest
